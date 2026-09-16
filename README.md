@@ -1,30 +1,124 @@
-# Projeto FiapRide - Teclado
+# FIAP POO - Teclado
 
-## Sobre o projeto
+Projeto desenvolvido para as aulas de Programação Orientada a Objetos (POO) da FIAP.
 
-Este projeto representa um teclado utilizando conceitos de Programação Orientada a Objetos.
+## Objeto escolhido
 
-O objeto Teclado representa um teclado do mundo real e possui informações sobre sua cor e seu formato.
+O objeto escolhido para o projeto é um Teclado.
 
-## Atributos
+A classe `Teclado` possui os seguintes atributos:
 
-A classe Teclado possui os seguintes atributos:
+- `cor`: String
+- `formato`: String
+- `modelo`: String
+- `idioma`: String
 
-- `cor`: representa a cor do teclado.
-- `formato`: representa o formato do teclado.
+Todos os atributos são privados, seguindo o conceito de encapsulamento.
 
-Ambos os atributos são do tipo `String`.
+## Aulas desenvolvidas
 
-## Métodos
+### Aula 1 - Classes e Objetos
 
-### alterarCor()
+Foi criada a classe `Teclado`, representando o objeto escolhido para o projeto.
 
-O método `alterarCor()` permite alterar a cor do teclado.
+Foram definidos seus atributos e realizada a criação de um objeto da classe no sistema principal.
 
-Regra de negócio:
-- A cor não pode ser vazia ou nula.
+### Aula 2 - Métodos e Comportamentos
 
-Exemplo:
+Foram adicionados métodos para alterar os dados do teclado:
 
-```java
-teclado.alterarCor("Branco");
+- `alterarCor()`
+- `alterarFormato()`
+
+Os métodos possuem regras de validação para impedir valores inválidos.
+
+Também foram realizados testes com valores válidos e inválidos.
+
+### Aula 3 - Encapsulamento
+
+Os atributos da classe foram definidos como `private`.
+
+Foram adicionados getters públicos para permitir a consulta dos atributos:
+
+- `getCor()`
+- `getFormato()`
+- `getModelo()`
+- `getIdioma()`
+
+Os setters foram definidos como `private`, protegendo a alteração direta dos atributos.
+
+As alterações são realizadas por meio de métodos públicos de comportamento.
+
+### Aula 4 - Construtores
+
+Foi criado um construtor para a classe `Teclado`.
+
+O construtor recebe os três atributos principais:
+
+- `cor`
+- `formato`
+- `modelo`
+
+O atributo `idioma` recebe inicialmente o valor padrão `"Português"`.
+
+O construtor utiliza os métodos privados de definição dos atributos, mantendo as regras de validação e o encapsulamento.
+
+Também foram adicionados comportamentos para alteração de:
+
+- cor
+- formato
+- modelo
+- idioma
+
+Todos os atributos possuem regras de validação.
+
+## Validações
+
+### Cor
+
+A cor não pode ser nula ou vazia.
+
+### Formato
+
+O formato deve ser:
+
+- Retangular
+- Ergonômico
+
+### Modelo
+
+O modelo não pode ser nulo ou vazio.
+
+### Idioma
+
+O idioma não pode ser nulo ou vazio.
+
+## Testes
+
+O arquivo `SistemaPrincipal.java` realiza testes com valores válidos e inválidos.
+
+Foram testados:
+
+- Alteração de cor válida
+- Alteração de cor inválida
+- Alteração de formato válida
+- Alteração de formato inválida
+- Alteração de modelo válida
+- Alteração de modelo inválida
+- Alteração de idioma válida
+- Alteração de idioma inválida
+
+Os testes demonstram que as regras de validação estão funcionando corretamente.
+
+## Estrutura do projeto
+
+```text
+fiap-poo
+├── src
+│   └── br.com.fiapride
+│       ├── main
+│       │   └── SistemaPrincipal.java
+│       └── model
+│           └── Teclado.java
+├── README.md
+└── Teclado.asta
