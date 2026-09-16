@@ -6,47 +6,70 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        // Criando o objeto Teclado
-        Teclado teclado = new Teclado("Preto", "Retangular");
+        // Criação do objeto utilizando o construtor
+        Teclado teclado = new Teclado(
+                "Preto",
+                "Retangular",
+                "Gamer RGB"
+        );
 
-        // Estado inicial
-        System.out.println("=== TECLADO ===");
+        // Exibindo os dados iniciais
+        System.out.println("=== DADOS INICIAIS ===");
         System.out.println("Cor: " + teclado.getCor());
         System.out.println("Formato: " + teclado.getFormato());
+        System.out.println("Modelo: " + teclado.getModelo());
+        System.out.println("Idioma: " + teclado.getIdioma());
 
-        // Teste 1 - Cor válida
-        System.out.println("\n--- Teste 1: Cor válida ---");
-
+        // Alterando a cor
+        System.out.println("\n=== ALTERANDO COR ===");
         teclado.alterarCor("Branco");
+        System.out.println("Nova cor: " + teclado.getCor());
 
-        System.out.println("Cor atual: " + teclado.getCor());
+        // Testando cor inválida
+        System.out.println("\n=== TESTANDO COR INVÁLIDA ===");
+        try {
+            teclado.alterarCor("");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
 
-        // Teste 2 - Cor inválida
-        System.out.println("\n--- Teste 2: Cor inválida ---");
-
-        teclado.alterarCor("");
-
-        System.out.println("Cor atual: " + teclado.getCor());
-
-        // Teste 3 - Formato válido
-        System.out.println("\n--- Teste 3: Formato válido ---");
-
+        // Alterando formato
+        System.out.println("\n=== ALTERANDO FORMATO ===");
         teclado.alterarFormato("Ergonômico");
+        System.out.println("Novo formato: " + teclado.getFormato());
 
-        System.out.println("Formato atual: " + teclado.getFormato());
+        // Testando formato inválido
+        System.out.println("\n=== TESTANDO FORMATO INVÁLIDO ===");
+        try {
+            teclado.alterarFormato("Redondo");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
 
-        // Teste 4 - Formato inválido
-        System.out.println("\n--- Teste 4: Formato inválido ---");
+        // Alterando modelo
+        System.out.println("\n=== ALTERANDO MODELO ===");
+        teclado.alterarModelo("Mecânico RGB");
+        System.out.println("Novo modelo: " + teclado.getModelo());
 
-        teclado.alterarFormato("Redondo");
+        // Testando modelo inválido
+        System.out.println("\n=== TESTANDO MODELO INVÁLIDO ===");
+        try {
+            teclado.alterarModelo("");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
 
-        System.out.println("Formato atual: " + teclado.getFormato());
+        // Alterando idioma
+        System.out.println("\n=== ALTERANDO IDIOMA ===");
+        teclado.alterarIdioma("Inglês");
+        System.out.println("Novo idioma: " + teclado.getIdioma());
 
-        // Teste 5 - Voltando para o formato Retangular
-        System.out.println("\n--- Teste 5: Retangular ---");
-
-        teclado.alterarFormato("Retangular");
-
-        System.out.println("Formato final: " + teclado.getFormato());
+        // Testando idioma inválido
+        System.out.println("\n=== TESTANDO IDIOMA INVÁLIDO ===");
+        try {
+            teclado.alterarIdioma("");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
     }
 }
