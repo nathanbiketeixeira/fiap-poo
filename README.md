@@ -157,3 +157,7 @@ A Aula 1 foi desenvolvida no primeiro commit do projeto, identificado pelo commi
 ### Registro - Aula 2
 
 A Aula 2 foi desenvolvida no primeiro commit do projeto, identificado pelo commit c3ed553. Nessa etapa foram adicionados métodos e comportamentos à classe Teclado, permitindo alterar seus dados e aplicar as regras de validação.
+
+### Registro - Aula 3
+
+A Aula 3 foi desenvolvida no primeiro commit do projeto, identificado pelo commit c3ed553. Nessa etapa foi trabalhado o encapsulamento da classe Teclado, protegendo seus atributos e organizando o acesso e a alteração dos dados.
