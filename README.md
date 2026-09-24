@@ -72,6 +72,33 @@ Também foram adicionados comportamentos para alteração de:
 
 Todos os atributos possuem regras de validação.
 
+### Aula 5 - Associação de Objetos
+
+Foi criada a classe `Mouse` e realizada uma associação entre `Teclado` e `Mouse`.
+
+A classe `Teclado` possui um objeto `Mouse` como atributo:
+
+- `mouse`: Mouse
+
+O construtor do `Teclado` foi atualizado para receber o objeto `Mouse`.
+
+Também foi criado o método `getMouse()`, permitindo acessar os dados do mouse associado.
+
+No `SistemaPrincipal`, foi realizado um teste da associação, acessando dados do mouse através do teclado.
+
+Exemplo:
+
+`teclado.getMouse().getCor()`
+
+Esse teste demonstra a comunicação entre os objetos e o conceito de associação.
+
+A classe `Mouse` possui os atributos:
+
+- `cor`: String
+- `tipo`: String
+
+Também foram adicionados métodos para alteração e consulta desses atributos, com validações.
+
 ## Validações
 
 ### Cor
