@@ -153,3 +153,7 @@ fiap-poo
 ### Registro - Aula 1
 
 A Aula 1 foi desenvolvida no primeiro commit do projeto, identificado pelo commit c3ed553. Nessa etapa foi criada a classe Teclado, representando o objeto escolhido para o projeto, com seus atributos e a criação de um objeto no sistema principal.
+
+### Registro - Aula 2
+
+A Aula 2 foi desenvolvida no primeiro commit do projeto, identificado pelo commit c3ed553. Nessa etapa foram adicionados métodos e comportamentos à classe Teclado, permitindo alterar seus dados e aplicar as regras de validação.
