@@ -7,12 +7,16 @@ public class Teclado {
     private String modelo;
     private String idioma;
 
+    // Associação com Mouse
+    private Mouse mouse;
+
     // Construtor
-    public Teclado(String cor, String formato, String modelo) {
+    public Teclado(String cor, String formato, String modelo, Mouse mouse) {
         setCor(cor);
         setFormato(formato);
         setModelo(modelo);
         setIdioma("Português");
+        this.mouse = mouse;
     }
 
     // Métodos de alteração
@@ -34,6 +38,11 @@ public class Teclado {
     public void alterarIdioma(String novoIdioma) {
         setIdioma(novoIdioma);
         System.out.println("Idioma alterado com sucesso!");
+    }
+
+    // Getter da associação
+    public Mouse getMouse() {
+        return mouse;
     }
 
     // Getters

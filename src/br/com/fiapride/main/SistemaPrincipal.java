@@ -1,27 +1,40 @@
 package br.com.fiapride.main;
 
+import br.com.fiapride.model.Mouse;
 import br.com.fiapride.model.Teclado;
 
 public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        // Criação do objeto utilizando o construtor
+        // Criando o objeto Mouse
+        Mouse mouse = new Mouse(
+                "Preto",
+                "Óptico"
+        );
+
+        // Criando o Teclado e associando o Mouse
         Teclado teclado = new Teclado(
                 "Preto",
                 "Retangular",
-                "Gamer RGB"
+                "Gamer RGB",
+                mouse
         );
 
         // Exibindo os dados iniciais
-        System.out.println("=== DADOS INICIAIS ===");
+        System.out.println("=== DADOS INICIAIS DO TECLADO ===");
         System.out.println("Cor: " + teclado.getCor());
         System.out.println("Formato: " + teclado.getFormato());
         System.out.println("Modelo: " + teclado.getModelo());
         System.out.println("Idioma: " + teclado.getIdioma());
 
-        // Alterando a cor
-        System.out.println("\n=== ALTERANDO COR ===");
+        // Exibindo dados do Mouse associado
+        System.out.println("\n=== MOUSE ASSOCIADO ===");
+        System.out.println("Cor do mouse: " + teclado.getMouse().getCor());
+        System.out.println("Tipo do mouse: " + teclado.getMouse().getTipo());
+
+        // Alterando a cor do teclado
+        System.out.println("\n=== ALTERANDO COR DO TECLADO ===");
         teclado.alterarCor("Branco");
         System.out.println("Nova cor: " + teclado.getCor());
 
@@ -71,5 +84,11 @@ public class SistemaPrincipal {
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
+
+        // Alterando informação do Mouse associado
+        System.out.println("\n=== ALTERANDO MOUSE ASSOCIADO ===");
+        teclado.getMouse().alterarCor("Vermelho");
+        System.out.println("Nova cor do mouse: "
+                + teclado.getMouse().getCor());
     }
 }
