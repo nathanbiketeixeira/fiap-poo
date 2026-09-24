@@ -149,3 +149,7 @@ fiap-poo
 │           └── Teclado.java
 ├── README.md
 └── Teclado.asta
+
+### Registro - Aula 1
+
+A Aula 1 foi desenvolvida no primeiro commit do projeto, identificado pelo commit c3ed553. Nessa etapa foi criada a classe Teclado, representando o objeto escolhido para o projeto, com seus atributos e a cria��o de um objeto no sistema principal.
